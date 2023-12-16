@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Engineering Tools</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Chemical Engineering Tools</h1>
+    </header>
+
+    <main>
+        <h2>
+            What is equation of state?<br> </h2>
+            <p>
+                To understand this you can go <a href="https://en.wikipedia.org/wiki/Equation_of_state#:~:text=In%20physics%20and%20chemistry%2C%20an,%2C%20temperature%2C%20or%20internal%20energy.">here</a>.
+            </p>
+            <p>
+            <b>Cubic equations of state</b> are a specific class of thermodynamic models for modeling the pressure of a gas as a function of temperature and density and which can be rewritten as a cubic function of the molar volume.
+            Cubic equations of state are called such because they can be rewritten as a cubic function of V<sub>m</sub>. 
+            Cubic equations of state originated from the van der Waals equation of state. Hence, all cubic
+            equations of state can be considered 'modified van der Waals equation of state'. 
+            There is a very large number of such cubic equations of state. For process engineering, cubic equations of state are today still highly relevant, e.g. the Peng Robinson equation of state or the Soave Redlich Kwong equation of state.
+            Equations of state are generally applied in the fields of physical chemistry and chemical engineering, particularly in the modeling of vapor–liquid equilibrium and chemical engineering process design.<br>
+            <br> <p style="text-align: center; font-size: 25px;"> Calculate the volume through the cubic equation of state, you can click on the button below </p> 
+            </p>
+
+        <!-- EQUATIONS OF STATE BUTTON -->
+        <button class="custom-button" onclick="toggleCalculatorSection()">Cubic Equations of State Calculator</button>
+
+        <div id="equationOfStateCalculators" class="calculator-section1">
+            <!-- <h2>Calculate Volume using any of the following equations of state mentioned below</h2> -->
+
+            <div id="vdwCalculator" class="calculator">
+                <section id="vdwCalculator">
+                    <h2>Van der Waals Equation of State</h2>
+                    <label for="vdwPressure">Pressure (bar):</label>
+                    <input type="text" id="vdwPressure" placeholder="Enter pressure">
+        
+                    <label for="vdwTemperature">Temperature (K):</label>
+                    <input type="text" id="vdwTemperature" placeholder="Enter temperature">
+        
+                    <label for="vdwCriticalPressure">Critical Pressure (bar):</label>
+                    <input type="text" id="vdwCriticalPressure" placeholder="Enter critical pressure">
+        
+                    <label for="vdwCriticalTemperature">Critical Temperature (K):</label>
+                    <input type="text" id="vdwCriticalTemperature" placeholder="Enter critical temperature">
+        
+                    <button onclick="calculateVanDerWaalsVolume()">Calculate Volume</button>
+        
+                    <p id="resultVDWVolume">Required Volume:</p>
+                </section>
+        
+            </div>
+
+            <div id="idealGasCalculator" class="calculator">
+                <section id="idealGasCalculator">
+                    <h2>Ideal Gas Equation of State</h2>
+                    <label for="igPressure">Pressure (Pa):</label>
+                    <input type="text" id="igPressure" placeholder="Enter pressure">
+
+                    <label for="igTemperature">Temperature (K):</label>
+                    <input type="text" id="igTemperature" placeholder="Enter temperature">
+
+                    <label for="igGasConstant">Gas Constant (J/(mol·K)): </label>
+                    <input type="text" id="igGasConstant" placeholder="Enter gas constant">
+
+                    <button onclick="calculateIdealGasVolume()">Calculate Ideal Gas Volume</button>
+
+                    <p id="resultIdealGasVolume">Required Volume: </p>
+                </section>
+            
+            </div>
+
+            <div id="pengRobinsonCalculator" class="calculator">
+                <section id="pengRobinsonCalculator">
+                    <h2>Peng-Robinson Equation of State</h2>
+                    <label for="pressure">Pressure (bar):</label>
+                    <input type="text" id="pressure" placeholder="Enter pressure">
+        
+                    <label for="temperature">Temperature (K):</label>
+                    <input type="text" id="temperature" placeholder="Enter temperature">
+        
+                    <label for="criticalPressure">Critical Pressure (bar):</label>
+                    <input type="text" id="criticalPressure" placeholder="Enter critical pressure">
+        
+                    <label for="criticalTemperature">Critical Temperature (K):</label>
+                    <input type="text" id="criticalTemperature" placeholder="Enter critical temperature">
+        
+                    <label for="accentricFactor">Accentric Factor:</label>
+                    <input type="text" id="accentricFactor" placeholder="Enter accentric factor">
+        
+                    <button onclick="calculateVolume()">Calculate Volume</button>
+        
+                    <p id="resultVolume">Required Volume: </p>
+                </section>
+            </div>
+
+            <div id="rkCalculator" class="calculator">
+                <section id="rkCalculator">
+                    <h2>Redlich-Kwong Equation of State</h2>
+                    <label for="rkPressure">Pressure (bar):</label>
+                    <input type="text" id="rkPressure" placeholder="Enter pressure">
+        
+                    <label for="rkTemperature">Temperature (K):</label>
+                    <input type="text" id="rkTemperature" placeholder="Enter temperature">
+        
+                    <label for="rkCriticalPressure">Critical Pressure (bar):</label>
+                    <input type="text" id="rkCriticalPressure" placeholder="Enter critical pressure">
+        
+                    <label for="rkCriticalTemperature">Critical Temperature (K):</label>
+                    <input type="text" id="rkCriticalTemperature" placeholder="Enter critical temperature">
+        
+                    <label for="rkAccentricFactor">Accentric Factor:</label>
+                    <input type="text" id="rkAccentricFactor" placeholder="Enter accentric factor">
+        
+                    <button onclick="calculateRKVolume()">Calculate Volume</button>
+        
+                    <p id="resultRKVolume">Required Volume:</p>
+                </section>
+            </div>
+
+            <div id="srkCalculator" class="calculator">
+                <section id="srkCalculator">
+                    <h2> Soave-Redlich-Kwong Equation of State</h2>
+                    <label for="srkPressure">Pressure (bar):</label>
+                    <input type="text" id="srkPressure" placeholder="Enter pressure">
+
+                    <label for="srkTemperature">Temperature (K):</label>
+                    <input type="text" id="srkTemperature" placeholder="Enter temperature">
+
+                    <label for="srkCriticalPressure">Critical Pressure (bar):</label>
+                    <input type="text" id="srkCriticalPressure" placeholder="Enter critical pressure">
+
+                    <label for="srkCriticalTemperature">Critical Temperature (K):</label>
+                    <input type="text" id="srkCriticalTemperature" placeholder="Enter critical temperature">
+
+                    <label for="srkAccentricFactor">Accentric Factor:</label>
+                    <input type="text" id="srkAccentricFactor" placeholder="Enter accentric factor">
+
+                    <button onclick="calculateSRKVolume()">Calculate Volume</button>
+
+                    <p id="resultSRKVolume">Required Volume:</p>
+                </section>
+
+            </div>
+        </div>
+
+        <h1 style="text-align: center;"> And remember </h1>
+            <!-- <div style="width: 100%;"></div><iframe src="https://giphy.com/embed/3o6Mbgw4xRN9w9LWOA" width="480" height="270" frameBorder="0" class="giphy-embed"></iframe><p><a href="https://giphy.com/gifs/thesimpsons-3o6Mbgw4xRN9w9LWOA">via GIPHY</a></p> -->
+            <div style="width:100%;height:20px;padding-bottom:20%;position:relative;"><iframe src="https://giphy.com/embed/3o6Mbgw4xRN9w9LWOA" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+            <p style="text-align: center; font-size: 10px;"><a href="https://giphy.com/gifs/thesimpsons-3o6Mbgw4xRN9w9LWOA">via GIPHY</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2021 Chemical Engineering Tools</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
