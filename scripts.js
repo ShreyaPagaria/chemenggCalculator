@@ -1,14 +1,14 @@
-// function calculate() {
-//     var inputA = parseFloat(document.getElementById('inputA').value);
-//     var inputB = parseFloat(document.getElementById('inputB').value);
+function calculate() {
+    var inputA = parseFloat(document.getElementById('inputA').value);
+    var inputB = parseFloat(document.getElementById('inputB').value);
 
-//     if (!isNaN(inputA) && !isNaN(inputB)) {
-//         var result = inputA + inputB; // Modify this based on the actual calculation needed
-//         document.getElementById('result').textContent = 'Result: ' + result;
-//     } else {
-//         alert('Please enter valid numeric values for both inputs.');
-//     }
-// }
+    if (!isNaN(inputA) && !isNaN(inputB)) {
+        var result = inputA + inputB; // Modify this based on the actual calculation needed
+        document.getElementById('result').textContent = 'Result: ' + result;
+    } else {
+        alert('Please enter valid numeric values for both inputs.');
+    }
+}
 
 function toggleCalculatorSection() {
     var calculatorSection = document.getElementById('equationOfStateCalculators');
