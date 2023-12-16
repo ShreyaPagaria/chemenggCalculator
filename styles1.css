@@ -30,7 +30,7 @@ main {
     border: 2px solid #333;
     background-color: #fff;
     color: #333;
-    font-size: 21px;
+    font-size: 17px;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -47,7 +47,7 @@ main {
     flex-wrap: wrap; /* Allow calculators to wrap to the next line */
     justify-content: space-between;
     margin-top: 2em;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .calculator-text {
@@ -69,7 +69,7 @@ label {
     display: block;
     margin-bottom: 0.5em;
     color: #333;
-    font-size: 21px;
+    font-size: 18px;
 }
 
 input {
@@ -79,7 +79,7 @@ input {
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 3px;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 section {
@@ -98,7 +98,7 @@ button {
     width: 25%;
     border-radius: 7px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 1em;
 }
 
@@ -108,7 +108,7 @@ button:hover {
 
 p {
     margin-top: 1em;
-    font-size: 21px;
+    font-size: 18px;
 }
 
 /* #gif{
